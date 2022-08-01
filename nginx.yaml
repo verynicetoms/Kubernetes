@@ -1,0 +1,37 @@
+apiVersion: apps/v1 #쿠버네티스 API Version
+
+kind: Deployment #Object Kind 정의
+
+metadata:
+
+  name: nginx-deployment #Object에 대한 Name
+
+spec: #오브젝트에 대해 어떤 상태를 의도하는지 정의를 합니다.
+
+  selector:
+
+    matchLabels:
+
+      app: nginx
+
+  replicas: 2 # 템플릿과 일치하는 2개의 포드를 실행하도록 배포에 지시합니다.
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: nginx
+
+    spec:
+
+      containers:
+
+      - name: nginx
+
+        image: nginx:1.14.2 #
+
+        ports:
+
+        - containerPort: 80
