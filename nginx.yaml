@@ -42,4 +42,5 @@ kubectl get pods -o wide
 
 --------------------------------------------------------------------
 #결과
+|
 ![다운로드](https://github132.s3.ap-northeast-2.amazonaws.com/nginx.png)
